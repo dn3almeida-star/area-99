@@ -10,11 +10,7 @@
 *{box-sizing:border-box}[hidden]{display:none!important}
 html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font:16px system-ui,sans-serif}
 #faixa{position:fixed;inset:0 0 auto;z-index:1000;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 10px;background:#444;text-align:center;transition:background .3s}
-#faixa,#faixa.dentro,#faixa.borda,#faixa.fora{background:#ffd400;color:#000}
-#estado{font-weight:900}
-#faixa.fora{animation:pisca 1s steps(2) infinite}
-@keyframes pisca{50%{background:#000;color:#ffd400}}
-@media (prefers-reduced-motion:reduce){#faixa.fora{animation:none}}
+#faixa.dentro{background:var(--dentro)}#faixa.borda{background:var(--borda);color:#111}#faixa.fora{background:var(--fora)}
 #estado{font-size:clamp(28px,9vw,56px);font-weight:800;letter-spacing:.02em;line-height:1.1}
 #detalhe{font-size:clamp(15px,4.5vw,22px);font-weight:600;margin-top:2px}
 #seta{display:inline-block;transition:transform .3s}
